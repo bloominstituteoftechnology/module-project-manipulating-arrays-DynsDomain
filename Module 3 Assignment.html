@@ -118,10 +118,16 @@
     // findEvenNums([0, 1, 2, 3, 4]) // should return [0, 2, 4]
     // ❗ Notes:
     // 🧠 Use any kind of loop you'd like and the push method to populate the array of even numbers.
-    function findEvenNums() {
-
+    function findEvenNums(ints) {
+        let evens = []
+        for (let idx in ints) {
+          let num = ints[idx]
+          if (num % 2 === 0) {
+            evens.push(num)
+          }
     }
-
+    return evens
+  }
     // 👉 CHALLENGE 6
     // 🧠 The function separateAges takes an array of integers (ages) as its argument.
     // 🧠 It returns a new array containing two elements, which happen to also be arrays.
@@ -129,8 +135,18 @@
     // 🧠 Ages in the subarrays should appear in the same order they appeared in the original array.
     // 🧠 Examples of usage:
     // separateAges([31, 12, 25, 65, 84, 20]) // should return [[12, 20], [31, 25, 65, 84]]
-    function separateAges() {
-
+    function separateAges(ages) {
+      let under21 = [];
+      let others = [];
+      for (let idx = 0; idx < ages.length;idx++) {
+        let age = ages[idx];
+        if (age < 21) {
+          under.push(age);
+        } else{
+            other.push(age);
+        }
+      }
+      return [ under21, others];
     }
 
     // 👉 CHALLENGE 7
